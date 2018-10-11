@@ -1,0 +1,8 @@
+./DNA_Protein_comp
+./gp120_data 
+./old_tests 
+./zeros_comp 
+*.fasta
+*.gz
+*.art
+*.bz2
