@@ -1,0 +1,6 @@
+- "left reads":
+  - "/data/metagenomes/160523Alm_D16-4705_1_sequence.fastq.gz"
+  "orientation": "fr"
+  "right reads":
+  - "/data/metagenomes/160523Alm_D16-4705_2_sequence.fastq.gz"
+  "type": "paired-end"

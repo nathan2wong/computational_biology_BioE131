@@ -1,0 +1,96 @@
+Command line: /usr/bin/metaspades	-1	/data/metagenomes/160523Alm_D16-4705_1_sequence.fastq.gz	-2	/data/metagenomes/160523Alm_D16-4705_2_sequence.fastq.gz	--meta	-o	/home/be131-02/computational_biology_BioE131/final_proj/seq_assembly	
+
+System information:
+  SPAdes version: 3.12.0
+  Python version: 2.7.15
+  OS: Linux-4.15.0-23-generic-x86_64-with-Ubuntu-18.04-bionic
+
+Output dir: /home/be131-02/computational_biology_BioE131/final_proj/seq_assembly
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Metagenomic mode
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: ['/data/metagenomes/160523Alm_D16-4705_1_sequence.fastq.gz']
+      right reads: ['/data/metagenomes/160523Alm_D16-4705_2_sequence.fastq.gz']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed
+Assembly parameters:
+  k: [21, 33, 55]
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned OFF
+Other parameters:
+  Dir for temp files: /home/be131-02/computational_biology_BioE131/final_proj/seq_assembly/tmp
+  Threads: 16
+  Memory limit (in Gb): 125
+
+
+======= SPAdes pipeline started. Log can be found here: /home/be131-02/computational_biology_BioE131/final_proj/seq_assembly/spades.log
+
+
+===== Read error correction started. 
+
+
+== Running read error correction tool: /usr/bin/spades-hammer /home/be131-02/computational_biology_BioE131/final_proj/seq_assembly/corrected/configs/config.info
+
+  0:00:00.000     4M / 4M    INFO    General                 (main.cpp                  :  75)   Starting BayesHammer, built from N/A, git revision N/A
+  0:00:00.000     4M / 4M    INFO    General                 (main.cpp                  :  76)   Loading config from /home/be131-02/computational_biology_BioE131/final_proj/seq_assembly/corrected/configs/config.info
+  0:00:00.000     4M / 4M    INFO    General                 (main.cpp                  :  78)   Maximum # of threads to use (adjusted due to OMP capabilities): 16
+  0:00:00.000     4M / 4M    INFO    General                 (memory_limit.cpp          :  49)   Memory limit set to 125 Gb
+  0:00:00.000     4M / 4M    INFO    General                 (main.cpp                  :  86)   Trying to determine PHRED offset
+  0:00:00.001     4M / 4M    INFO    General                 (main.cpp                  :  92)   Determined value is 33
+  0:00:00.001     4M / 4M    INFO    General                 (hammer_tools.cpp          :  36)   Hamming graph threshold tau=1, k=21, subkmer positions = [ 0 10 ]
+  0:00:00.001     4M / 4M    INFO    General                 (main.cpp                  : 113)   Size of aux. kmer data 24 bytes
+     === ITERATION 0 begins ===
+  0:00:00.001     4M / 4M    INFO   K-mer Counting           (kmer_data.cpp             : 280)   Estimating k-mer count
+  0:00:00.267   260M / 260M  INFO   K-mer Counting           (kmer_data.cpp             : 285)   Processing /data/metagenomes/160523Alm_D16-4705_1_sequence.fastq.gz
+  0:09:02.136   320M / 320M  INFO   K-mer Counting           (kmer_data.cpp             : 294)   Processed 99377914 reads
+  0:09:02.136   320M / 320M  INFO   K-mer Counting           (kmer_data.cpp             : 285)   Processing /data/metagenomes/160523Alm_D16-4705_2_sequence.fastq.gz
+  0:18:09.788   320M / 320M  INFO   K-mer Counting           (kmer_data.cpp             : 294)   Processed 198755828 reads
+  0:18:09.788   320M / 320M  INFO   K-mer Counting           (kmer_data.cpp             : 299)   Total 198755828 reads processed
+  0:18:11.706   320M / 320M  INFO   K-mer Counting           (kmer_data.cpp             : 306)   Estimated 10749474366 distinct kmers
+  0:18:11.731    64M / 320M  INFO   K-mer Counting           (kmer_data.cpp             : 311)   Filtering singleton k-mers
+43 8 0
+nslots: 34359738368
+bits per slot: 8 range: 0000080000000000
+  0:18:11.731    40G / 40G   INFO   K-mer Counting           (kmer_data.cpp             : 317)   Processing /data/metagenomes/160523Alm_D16-4705_1_sequence.fastq.gz
+  1:34:40.937    40G / 40G   INFO   K-mer Counting           (kmer_data.cpp             : 326)   Processed 99377914 reads
+  1:34:40.937    40G / 40G   INFO   K-mer Counting           (kmer_data.cpp             : 317)   Processing /data/metagenomes/160523Alm_D16-4705_2_sequence.fastq.gz
+  2:43:35.847    40G / 40G   INFO   K-mer Counting           (kmer_data.cpp             : 326)   Processed 198755828 reads
+  2:43:35.847    40G / 40G   INFO   K-mer Counting           (kmer_data.cpp             : 331)   Total 198755828 reads processed
+  2:43:35.847    40G / 40G   INFO   K-mer Index Building     (kmer_index_builder.hpp    : 301)   Building kmer index
+  2:43:35.847    40G / 40G   INFO    General                 (kmer_index_builder.hpp    : 117)   Splitting kmer instances into 256 files using 16 threads. This might take a while.
+  2:43:35.848    40G / 40G   INFO    General                 (file_limit.hpp            :  32)   Open file limit set to 1024
+  2:43:35.848    40G / 40G   INFO    General                 (kmer_splitters.hpp        :  89)   Memory available for splitting buffers: 1.7583 Gb
+  2:43:35.848    40G / 40G   INFO    General                 (kmer_splitters.hpp        :  97)   Using cell size of 262144
+  2:43:35.891    49G / 49G   INFO   K-mer Splitting          (kmer_data.cpp             :  97)   Processing /data/metagenomes/160523Alm_D16-4705_1_sequence.fastq.gz
+  2:43:58.663    49G / 49G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 3162201 reads
+  2:44:21.372    49G / 49G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 6338116 reads
+  2:44:44.128    49G / 49G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 9471321 reads
+  2:45:07.827    49G / 49G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 12585470 reads
+  2:45:32.830    49G / 49G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 15730165 reads
+  2:45:55.826    49G / 49G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 18870729 reads
+  2:46:19.087    49G / 49G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 22054577 reads
+  2:46:42.116    49G / 49G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 25188143 reads
+  2:47:05.538    49G / 49G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 28393078 reads
+  2:47:29.301    49G / 49G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 31633854 reads
+  2:47:52.427    49G / 49G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 34852070 reads
+  2:51:46.290    49G / 49G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 67240111 reads
+  2:55:05.776    49G / 49G   ERROR   General                 (kmer_splitters.hpp        : 145)   I/O error! Incomplete write! Reason: No space left on device. Error code: 28
+
+
+== Error ==  system call for: "['/usr/bin/spades-hammer', '/home/be131-02/computational_biology_BioE131/final_proj/seq_assembly/corrected/configs/config.info']" finished abnormally, err code: 255
+
+In case you have troubles running SPAdes, you can write to spades.support@cab.spbu.ru
+or report an issue on our GitHub repository github.com/ablab/spades
+Please provide us with params.txt and spades.log files from the output directory.

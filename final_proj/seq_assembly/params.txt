@@ -1,0 +1,36 @@
+Command line: /usr/bin/metaspades	-1	/data/metagenomes/160523Alm_D16-4705_1_sequence.fastq.gz	-2	/data/metagenomes/160523Alm_D16-4705_2_sequence.fastq.gz	--meta	-o	/home/be131-02/computational_biology_BioE131/final_proj/seq_assembly	
+
+System information:
+  SPAdes version: 3.12.0
+  Python version: 2.7.15
+  OS: Linux-4.15.0-23-generic-x86_64-with-Ubuntu-18.04-bionic
+
+Output dir: /home/be131-02/computational_biology_BioE131/final_proj/seq_assembly
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Metagenomic mode
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: ['/data/metagenomes/160523Alm_D16-4705_1_sequence.fastq.gz']
+      right reads: ['/data/metagenomes/160523Alm_D16-4705_2_sequence.fastq.gz']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed
+Assembly parameters:
+  k: [21, 33, 55]
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned OFF
+Other parameters:
+  Dir for temp files: /home/be131-02/computational_biology_BioE131/final_proj/seq_assembly/tmp
+  Threads: 16
+  Memory limit (in Gb): 125
+
